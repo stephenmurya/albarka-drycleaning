@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 52%, #ffffff 100%);
+  color: var(--foreground);
+}
+
+@layer base {
+  * {
+    @apply border-slate-200;
+  }
+
+  body {
+    @apply font-sans text-slate-800 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-slate-900;
+  }
+
+  ::selection {
+    @apply bg-emerald-100 text-emerald-950;
+  }
+}
+
+@layer utilities {
+  .content-shell {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-space {
+    @apply py-16 sm:py-20;
+  }
+
+  .soft-border {
+    border: 1px solid rgba(148, 163, 184, 0.18);
+  }
+
+  .card-shadow {
+    box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
